@@ -10,7 +10,7 @@ gem_spec = Gem::Specification.new do |spec|
   spec.email         = ["shaunhubbard2013@icloud.com", "hogihung@gmail.com"]
   spec.summary       = %q{A reasonable way to calculate the distance between two geographic locations given longitude and latitude for each.}
   spec.description   = %q{ This calculates distance between two parts of the earth via Haversine formula at the speed of C}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/pedantix/haversine_fast"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
