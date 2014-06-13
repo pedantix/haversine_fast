@@ -4,8 +4,8 @@
 void Init_calc_haversine();
 
 //define the following constants
-//radius of the earth 
-static const double RADIUS_OF_EARTH = 6378.1370;
+//radius of the earth, POLAR
+static const double RADIUS_OF_EARTH = 6335.592;
 
 //deg2rad
 static const double DEG2RAD = M_PI / 180;
@@ -18,15 +18,20 @@ static const double DEG2RAD = M_PI / 180;
 #define NUM2RADDBL(x) (NUM2DBL(x) * DEG2RAD)
 
 static VALUE calculate_distance_by_haversine(VALUE self, VALUE lat1, VALUE lon1, VALUE lat2, VALUE lon2){
-  //convert values to double
   
   double  dLat1 = NUM2RADDBL(lat1),
           dLon1 = NUM2RADDBL(lon1),
           dLat2 = NUM2RADDBL(lat2),
-          dLon2 = NUM2RADDBL(lon2),;
+          dLon2 = NUM2RADDBL(lon2),
+          result;
 
+  result = 2.0 * RADIUS_OF_EARTH *
+  asin(sqrt(
+    (1-cos(dLat2-dLat1))/2 + 
+    cos(dLat1)*cos(dLat2) * (1-cos(dLon2-dLon1))/2
+    ));
 
-  return rb_float_new((double)0.00);
+  return rb_float_new(result);
 }
 
 void Init_calc_haversine(){
