@@ -9,7 +9,7 @@ gem_spec = Gem::Specification.new do |spec|
   spec.authors       = ["Shaun Hubbard", "John F. Hogarty"]
   spec.email         = ["shaunhubbard2013@icloud.com", "hogihung@gmail.com"]
   spec.summary       = %q{A reasonable way to calculate the distance between two geographic locations given longitude and latitude for each.}
-  spec.description   = %q{ This takes advantadge of C being faster at calculating double floating point values then say ruby. A project nescesitated the haversine calculation frequently which would be sub optimal in ruby, there were gems that I found that did this which were either old,(2+ years) or they ran on ruby which defeated the purpose or did a lot more then just calculate the minimum distance between two points on an ellipsoid. Either way this was a nice exercise to remove external dependencies and optimize a continuous calculation }
+  spec.description   = %q{ This calculates distance between two parts of the earth via Haversine formula at the speed of C}
   spec.homepage      = ""
   spec.license       = "MIT"
 

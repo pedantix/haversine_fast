@@ -1,4 +1,5 @@
 require "haversine_fast/version"
+require "calc_haversine"
 
 module HaversineFast
   module_function

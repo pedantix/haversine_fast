@@ -1,6 +1,5 @@
 require "simplecov"
 
-require 'calc_haversine'
 require "haversine_fast"
 
 SimpleCov.start do
