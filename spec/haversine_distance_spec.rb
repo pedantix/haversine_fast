@@ -18,7 +18,7 @@ RSpec.describe HaversineFast do
 
   let(:hong_kong_residence) { TestLocation.new(22.396428, 114.109497, "Hong Kong") }
 
-  let(:tolerance) { 5.00 }
+  let(:tolerance) { 1.00 }
 
   it { expect(subject).to respond_to(:calc_distance) }
 
@@ -41,7 +41,7 @@ RSpec.describe HaversineFast do
     end
 
     it "should indicate there are 13950.72km between jax residence and hong kong residence" do
-      expect(distance_between(jax_residence, hong_kong_residence)).to be_within(tolerance * 20).of(13950.72)
+      expect(distance_between(jax_residence, hong_kong_residence)).to be_within(tolerance * 100).of(13950.72)
     end
   end
 
