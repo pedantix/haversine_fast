@@ -24,7 +24,28 @@ Or install it yourself as:
     $ gem install haversine_fast
 
 ## Usage
+For a given starting location of lat-1, lng-1 and an ending location of lat-2, lng-2, use:
 
+```
+HaversineFast.calc_distance(30.1959496, -81.5497181, 30.279191, -81.3895320)
+```
+
+Examples via the rails console:
+
+```
+rails console
+[2] pry(main)> HaversineFast.calc_distance(30.1959496, -81.5497181, 30.279191, -81.3895320)
+=> 17.8579022904856
+[3] pry(main)>
+```
+
+<em>Note: The above result is in kilometers.  To perform a calculation for miles, use can use the following:</em>
+
+```
+[3] pry(main)> ( 0.62137 * HaversineFast.calc_distance(30.1959496, -81.5497181, 30.279191, -81.3895320) ).floor
+=> 11
+[4] pry(main)>
+```
 
 
 ## Contributing
