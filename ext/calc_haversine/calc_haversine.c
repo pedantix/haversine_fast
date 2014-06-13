@@ -17,13 +17,13 @@ static const double DEG2RAD = M_PI / 180;
 
 #define NUM2RADDBL(x) (NUM2DBL(x) * DEG2RAD)
 
-static VALUE calculate_distance_by_haversine(VALUE self, VALUE lon1, VALUE lat1, VALUE lon2, VALUE lat2){
+static VALUE calculate_distance_by_haversine(VALUE self, VALUE lat1, VALUE lon1, VALUE lat2, VALUE lon2){
   //convert values to double
   
-  double  dLon1 = NUM2RADDBL(lon1),
-          dLat1 = NUM2RADDBL(lat1),
-          dLon2 = NUM2RADDBL(lon2),
-          dLat2 = NUM2RADDBL(lat2);
+  double  dLat1 = NUM2RADDBL(lat1),
+          dLon1 = NUM2RADDBL(lon1),
+          dLat2 = NUM2RADDBL(lat2),
+          dLon2 = NUM2RADDBL(lon2),;
 
 
   return rb_float_new((double)0.00);
