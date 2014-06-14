@@ -39,7 +39,7 @@ rails console
 [3] pry(main)>
 ```
 
-<em>Note: The above result is in kilometers.  To perform a calculation for miles, use can use the following:</em>
+<em>Note: The above result is in kilometers.  To perform a calculation for miles, you can use the following:</em>
 
 ```
 [3] pry(main)> ( 0.62137 * HaversineFast.calc_distance(30.1959496, -81.5497181, 30.279191, -81.3895320) ).floor
